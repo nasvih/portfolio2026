@@ -39,7 +39,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 className="font-mono text-sm uppercase tracking-[0.3em] text-muted-foreground"
               >
-                DevOps Engineer • Web Developer • Tech Leader
+                LEAD DEVOPS ENGINEER • CLOUD & STARTUP INFRASTRUCTURE • TECH LEAD
               </motion.div>
             </div>
 
@@ -74,9 +74,7 @@ export const HeroSection = () => {
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.5 }}
               className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed"
             >
-              Self-driven DevOps & IT professional with real-world experience 
-              deploying CI/CD pipelines, building cloud-native platforms, and 
-              managing multi-client web development projects.
+              Lead DevOps Engineer with real-world experience building and operating reliable cloud infrastructure, CI/CD pipelines, and production systems for startups and growing teams.
             </motion.p>
 
             {/* Contact Info */}
@@ -206,7 +204,8 @@ export const HeroSection = () => {
                 className="absolute -right-4 md:-right-8 bottom-8 bg-background px-4 py-2 border border-border"
               >
                 <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                  Information Technology Specialist
+                  
+                  Lead DevOps Engineer
                 </span>
               </motion.div>
             </div>
