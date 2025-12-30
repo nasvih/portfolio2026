@@ -102,7 +102,7 @@ export const ContactSection = () => {
                   Available Immediately
                 </span>
                 <p className="text-xs opacity-60 mt-1">
-                  Saudi Arabia • Transferable Iqama
+                  Saudi Arabia • India
                 </p>
               </div>
             </motion.div>
