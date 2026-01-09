@@ -4,7 +4,7 @@ import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
-    title: "IT Specialist",
+    title: "Lead Devops Engineer",
     company: "Current Company",
     period: "September 2025 – Present",
     location: "Jeddah, Saudi Arabia",
