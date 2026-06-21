@@ -107,6 +107,8 @@ svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-l
 .nav.scrolled{background:rgba(255,255,255,.92);box-shadow:0 8px 30px rgba(29,58,143,.12)}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.02em}
 .logo .mark{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--grad);color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em;box-shadow:0 5px 14px rgba(37,99,235,.35)}
+.logo .name{font-size:16px;color:var(--ink);white-space:nowrap}
+@media(max-width:380px){.logo .name{font-size:14.5px}}
 .nav-links{display:flex;align-items:center;gap:2px}
 .nav-links a{position:relative;padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600;color:#445069;transition:.16s}
 .nav-links a:hover{background:rgba(37,99,235,.08);color:var(--primary-deep)}
@@ -222,7 +224,7 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
 <!-- NAV -->
 <div class="nav-outer" id="navOuter">
   <nav class="nav" id="nav">
-    <a href="#home" class="logo"><span class="mark">NV</span></a>
+    <a href="#home" class="logo"><span class="mark">NV</span><span class="name">Nasvih Valliyattu</span></a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
