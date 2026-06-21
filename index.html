@@ -64,8 +64,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-l
 .nav{max-width:1120px;margin:0 auto;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 18px;border-radius:999px;border:1px solid var(--border-soft);background:rgba(255,255,255,.6);backdrop-filter:saturate(180%) blur(14px);transition:.3s}
 .nav.scrolled{background:rgba(255,255,255,.82);box-shadow:0 8px 30px rgba(29,58,143,.1);border-color:var(--border)}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.02em}
-.logo .mark{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px;width:32px;height:32px;border-radius:9px;background:var(--grad);padding:6px}
-.logo .mark span{border-radius:2px;background:rgba(255,255,255,.9)}.logo .mark span:nth-child(2),.logo .mark span:nth-child(3){background:rgba(255,255,255,.6)}
+.logo .mark{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--grad);color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em;box-shadow:0 5px 14px rgba(37,99,235,.35)}
 .nav-links{display:flex;align-items:center;gap:2px}
 .nav-links a{padding:8px 14px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted);transition:.16s}
 .nav-links a:hover{background:rgba(37,99,235,.08);color:var(--primary-deep)}
@@ -162,6 +161,14 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
 .foot .social a:hover{border-color:rgba(37,99,235,.35);color:var(--primary)}
 .foot .cp{color:var(--faint);font-size:13px}
 
+.hlgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px}
+@media(max-width:880px){.hlgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.hlgrid{grid-template-columns:1fr}}
+.hl{display:flex;gap:14px;align-items:flex-start;padding:20px 22px;transition:.2s}
+.hl:hover{box-shadow:var(--shadow);border-color:rgba(37,99,235,.22)}
+.hl .tile{flex:0 0 auto;width:40px;height:40px;border-radius:11px}
+.hl .tile svg{width:19px;height:19px}
+.hl p{font-size:14.5px;color:var(--muted);line-height:1.5}.hl p b{color:var(--ink);font-weight:600}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
 .reveal.in{opacity:1;transform:none}
 </style>
@@ -171,7 +178,7 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
 <!-- NAV -->
 <div class="nav-outer" id="navOuter">
   <nav class="nav" id="nav">
-    <a href="#home" class="logo"><span class="mark"><span></span><span></span><span></span><span></span></span> Nasvih</a>
+    <a href="#home" class="logo"><span class="mark">NV</span></a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -195,9 +202,9 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
 <header class="hero" id="home">
   <div class="orb orb1"></div><div class="orb orb2"></div>
   <div class="container hero-inner">
-    <span class="badge"><svg viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg> Cloud · CI/CD · Infrastructure</span>
-    <h1>I build infrastructure that<br><span class="text-grad">ships fast & stays up.</span></h1>
-    <p class="sub">I'm Muhammed Nasvih — a DevOps Engineer who turns manual, fragile setups into reliable, automated platforms across cloud, CI/CD, containers and security.</p>
+    <span class="badge"><svg viewBox="0 0 24 24" style="width:14px;height:14px"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg> DevOps · Cloud · Technical Leadership</span>
+    <h1>I lead the infrastructure that<br><span class="text-grad">ships fast & stays up.</span></h1>
+    <p class="sub">I'm Muhammed Nasvih — a DevOps engineer leading cloud infrastructure, CI/CD, security and the internal platforms (and the team) behind a fast-moving, multi-brand technology company.</p>
     <div class="cta">
       <a href="#contact" class="btn btn-primary">Get in touch <svg class="ar" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a href="#work" class="btn btn-outline">View my work</a>
@@ -270,10 +277,12 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
       <div class="head"><h3>Lead DevOps Engineer</h3><span class="when">Sep 2025 — Present</span></div>
       <div class="co">Code7 Information Technology</div><div class="loc">Jeddah, Saudi Arabia · Full-time</div>
       <ul>
-        <li>Lead the IT &amp; DevOps function — own <b>infrastructure, security and technical operations</b> for the company's products and platforms.</li>
-        <li>Build and maintain <b>internal products and systems</b>, from CI/CD and servers to dashboards and internal tooling.</li>
-        <li>Implement <b>infrastructure solutions and security protocols</b>, and streamline IT processes for efficiency.</li>
-        <li>Coordinate technology initiatives with stakeholders and mentor the engineering team.</li>
+        <li><b>Lead the IT &amp; DevOps function</b> — own the infrastructure, security and technical roadmap for the company and its products across three countries.</li>
+        <li>Architected and operate cloud + on-prem systems: <b>self-hosted GitLab &amp; CI/CD</b>, servers, CDN, backups and disaster recovery.</li>
+        <li>Migrated the organisation to <b>Microsoft 365 (80+ users)</b> and consolidated fragmented infrastructure into a single, governed setup.</li>
+        <li>Built internal platforms — an <b>asset/CRM hub, custom ERP and a multi-tenant SaaS</b> — and automated operations with n8n &amp; custom APIs.</li>
+        <li>Led <b>security &amp; reliability</b>: incident response, malware recovery, hardening, RBAC and DNS/email security; integrated payment gateways &amp; ZATCA e-invoicing.</li>
+        <li>Drive <b>hiring, onboarding and mentoring</b> — screened 250+ CVs, ran technical interviews, and lead a growing engineering team.</li>
       </ul>
     </div>
     <div class="card role reveal">
@@ -306,8 +315,24 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
   </div>
 </section>
 
+<!-- IMPACT -->
+<section class="section section-alt" id="impact">
+  <div class="container shead reveal"><span class="eyebrow">Selected impact</span><h2>What I've built &amp; led</h2><p>A snapshot of the migrations, platforms and teams I've delivered and lead.</p></div>
+  <div class="container hlgrid">
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H4zM2 20h20"/></svg></span><p>Led migration of <b>80+ users to Microsoft 365</b> across three countries, with backups &amp; disaster recovery.</p></div>
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span><p>Stood up <b>self-hosted GitLab &amp; CI/CD</b> for a distributed dev team — one repeatable release pipeline.</p></div>
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><p>Cut <b>cloud &amp; SaaS costs</b> through audits, right-sizing and smarter architecture — no loss of uptime.</p></div>
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><p>Remediated a <b>live malware / SEO-spam attack</b> end-to-end and hardened every site.</p></div>
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M5 12h14M5 12V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5M8 19h8M8 16v3M16 16v3"/></svg></span><p>Designed a <b>cost-efficient multi-site VPN</b> for secure access across countries.</p></div>
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></span><p>Built internal platforms — an <b>asset/CRM hub, custom ERP and a multi-tenant SaaS</b>.</p></div>
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M12 20v-7M6 20v-4M18 20V8M3 4h18"/></svg></span><p>Automated operations with <b>n8n and custom messaging / data APIs</b> — major time savings.</p></div>
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 10h18M3 6h18v12H3zM7 15h2"/></svg></span><p>Integrated <b>payment gateways &amp; ZATCA e-invoicing</b> compliance for Saudi operations.</p></div>
+    <div class="card hl reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><p>Drove <b>hiring (250+ CVs), onboarding and mentoring</b> — lead a growing engineering team.</p></div>
+  </div>
+</section>
+
 <!-- WORK -->
-<section class="section section-alt" id="work">
+<section class="section" id="work">
   <div class="container shead reveal"><span class="eyebrow">Selected work</span><h2>Things I've built</h2><p>A mix of DevOps, cloud and full-stack projects. Some employer and client work is kept confidential.</p></div>
   <div class="container grid3">
     <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><h3>CI/CD &amp; cloud automation</h3><p>GitHub Actions pipelines with containerised Docker/Kubernetes deployments on AWS — cutting deployment time by 60% with monitoring built in.</p><div class="chips" style="margin-top:12px"><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">AWS</span></div></div>
@@ -320,7 +345,7 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
 </section>
 
 <!-- CERT / EDU -->
-<section class="section" id="credentials">
+<section class="section section-alt" id="credentials">
   <div class="container shead reveal"><span class="eyebrow">Credentials</span><h2>Certifications &amp; education</h2></div>
   <div class="two">
     <div class="card cert reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M18 10h-1.3a8 8 0 1 0-11.4 0H4a2 2 0 0 0 0 8h14a4 4 0 0 0 0-8z"/></svg></span><div><h3>AWS Certified Solutions Architect – Associate</h3><div class="m">Amazon Web Services</div><span class="pill pill-prog">● Currently pursuing</span></div></div>
@@ -350,7 +375,7 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
 
 <footer>
   <div class="container foot">
-    <a href="#home" class="logo"><span class="mark"><span></span><span></span><span></span><span></span></span> Muhammed Nasvih V</a>
+    <a href="#home" class="logo"><span class="mark">NV</span> Muhammed Nasvih V</a>
     <div class="social">
       <a href="https://sa.linkedin.com/in/nasvih" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a>
       <a href="mailto:nasvih.va@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
