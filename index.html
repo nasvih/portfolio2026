@@ -61,13 +61,15 @@ svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-l
 
 /* NAV (floating pill) */
 .nav-outer{position:fixed;inset-inline:0;top:0;z-index:50;padding:14px 16px;transition:.3s}
-.nav{max-width:1120px;margin:0 auto;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 18px;border-radius:999px;border:1px solid var(--border-soft);background:rgba(255,255,255,.6);backdrop-filter:saturate(180%) blur(14px);transition:.3s}
-.nav.scrolled{background:rgba(255,255,255,.82);box-shadow:0 8px 30px rgba(29,58,143,.1);border-color:var(--border)}
+.nav{max-width:1120px;margin:0 auto;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 18px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(16px);transition:.3s}
+.nav.scrolled{background:rgba(255,255,255,.92);box-shadow:0 8px 30px rgba(29,58,143,.12)}
 .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:-.02em}
 .logo .mark{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--grad);color:#fff;font-weight:800;font-size:15px;letter-spacing:.04em;box-shadow:0 5px 14px rgba(37,99,235,.35)}
 .nav-links{display:flex;align-items:center;gap:2px}
-.nav-links a{padding:8px 14px;border-radius:999px;font-size:14px;font-weight:500;color:var(--muted);transition:.16s}
+.nav-links a{position:relative;padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600;color:#445069;transition:.16s}
 .nav-links a:hover{background:rgba(37,99,235,.08);color:var(--primary-deep)}
+.nav-links a.active{background:rgba(37,99,235,.1);color:var(--primary-deep)}
+.nav-links a.active::after{content:"";position:absolute;bottom:1px;left:50%;transform:translateX(-50%);width:20px;height:3px;border-radius:3px;background:var(--grad)}
 .nav-cta{display:flex;align-items:center;gap:8px}
 .nav-cta .btn{height:38px;padding:0 16px;font-size:14px}
 .burger{display:none;width:42px;height:42px;border:0;background:none;color:var(--ink);border-radius:10px;cursor:pointer;align-items:center;justify-content:center}
@@ -249,23 +251,26 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS / SERVICES -->
 <section class="section section-alt" id="skills">
   <div class="container shead reveal">
-    <span class="eyebrow">Toolbox</span>
-    <h2>Skills &amp; technologies</h2>
-    <p>An end-to-end DevOps toolkit — pipelines, containers, cloud, observability, security and the systems on top.</p>
+    <span class="eyebrow">Skills &amp; services</span>
+    <h2>What I do, end to end</h2>
+    <p>A full DevOps &amp; cloud capability set — from pipelines and clusters to cost, security, identity and the platforms on top. I go deep to cut cost, risk and complexity.</p>
   </div>
   <div class="container grid3">
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><h3>CI/CD &amp; Automation</h3><div class="chips"><span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span><span class="tag">Jenkins</span><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">n8n</span></div></div>
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></span><h3>Containers &amp; IaC</h3><div class="chips"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Terraform</span><span class="tag">Ansible</span></div></div>
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M18 10h-1.3a8 8 0 1 0-11.4 0H4a2 2 0 0 0 0 8h14a4 4 0 0 0 0-8z"/></svg></span><h3>Cloud Platforms</h3><div class="chips"><span class="tag">AWS · EC2 · S3 · Route 53</span><span class="tag">Azure</span><span class="tag">Cloudflare</span><span class="tag">Render</span></div></div>
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 13l3 3 4-5 4 4"/></svg></span><h3>Observability</h3><div class="chips"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Alerting</span><span class="tag">Uptime monitoring</span></div></div>
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M5 12h14M5 12V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5M8 19h8M8 16v3M16 16v3"/></svg></span><h3>Linux &amp; Networking</h3><div class="chips"><span class="tag">Linux / Ubuntu</span><span class="tag">Nginx</span><span class="tag">Self-hosted GitLab</span><span class="tag">VPN</span><span class="tag">DNS</span></div></div>
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Security &amp; Reliability</h3><div class="chips"><span class="tag">Hardening</span><span class="tag">Incident response</span><span class="tag">RBAC</span><span class="tag">High availability</span></div></div>
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span><h3>Development</h3><div class="chips"><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span></div></div>
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg></span><h3>Workspace &amp; Identity</h3><div class="chips"><span class="tag">Microsoft 365</span><span class="tag">Google Workspace</span><span class="tag">IAM</span></div></div>
-    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 10h18M3 6h18v12H3zM7 15h2"/></svg></span><h3>AI &amp; Tooling</h3><div class="chips"><span class="tag">Claude API</span><span class="tag">AI automation</span><span class="tag">Git</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><h3>CI/CD &amp; Automation</h3><p>Repeatable, automated release pipelines that ship fast and safely.</p><div class="chips" style="margin-top:14px"><span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span><span class="tag">Jenkins</span><span class="tag">Pipeline design</span><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Webhooks</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></span><h3>Containers &amp; IaC</h3><p>Containerised, reproducible infrastructure defined as code.</p><div class="chips" style="margin-top:14px"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Compose</span><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Registries</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M18 10h-1.3a8 8 0 1 0-11.4 0H4a2 2 0 0 0 0 8h14a4 4 0 0 0 0-8z"/></svg></span><h3>Cloud Platforms</h3><p>Architecting and running workloads across major clouds.</p><div class="chips" style="margin-top:14px"><span class="tag">AWS · EC2·S3·RDS·Route 53</span><span class="tag">Azure</span><span class="tag">Huawei Cloud</span><span class="tag">Oracle Cloud</span><span class="tag">Cloudflare</span><span class="tag">Render</span><span class="tag">Railway</span><span class="tag">BunnyCDN</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h3>Cloud Cost Optimisation</h3><p>Deep audits, right-sizing and license cleanup that cut cloud &amp; SaaS spend — without hurting uptime.</p><div class="chips" style="margin-top:14px"><span class="tag">FinOps</span><span class="tag">Cost audits</span><span class="tag">Right-sizing</span><span class="tag">License cleanup</span><span class="tag">VAT/GST reclaim</span><span class="tag">Subscription rationalisation</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M5 12h14M5 12V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5M8 19h8M8 16v3M16 16v3"/></svg></span><h3>Linux, Servers &amp; Web</h3><p>Hardened, well-tuned servers and web stacks.</p><div class="chips" style="margin-top:14px"><span class="tag">Linux / Ubuntu</span><span class="tag">Nginx</span><span class="tag">SSL/TLS · Let's Encrypt</span><span class="tag">systemd</span><span class="tag">rsync backups</span><span class="tag">Self-hosted GitLab</span><span class="tag">Zero-downtime migration</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><h3>Networking &amp; Secure Access</h3><p>Secure connectivity across sites and countries.</p><div class="chips" style="margin-top:14px"><span class="tag">OpenVPN</span><span class="tag">Tailscale</span><span class="tag">Multi-site VPN</span><span class="tag">DNS · SPF·DMARC·BIMI</span><span class="tag">Firewall / UFW</span><span class="tag">Reverse proxy</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 13l3 3 4-5 4 4"/></svg></span><h3>Monitoring &amp; Reliability</h3><p>Visibility and resilience so issues surface before users notice.</p><div class="chips" style="margin-top:14px"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Alerting</span><span class="tag">Uptime monitoring</span><span class="tag">Disaster recovery</span><span class="tag">Backups</span><span class="tag">High availability</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Security &amp; Compliance</h3><p>Protecting systems and meeting Saudi regulation.</p><div class="chips" style="margin-top:14px"><span class="tag">Incident response</span><span class="tag">Malware removal</span><span class="tag">Hardening</span><span class="tag">Vulnerability scans</span><span class="tag">RBAC &amp; secrets</span><span class="tag">PDPL / NCA</span><span class="tag">ZATCA</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg></span><h3>Identity &amp; Workspace</h3><p>Org-wide identity, mail and collaboration at scale.</p><div class="chips" style="margin-top:14px"><span class="tag">Microsoft 365 · Teams · OneDrive</span><span class="tag">Google Workspace</span><span class="tag">Zoho</span><span class="tag">IAM</span><span class="tag">Mail infrastructure</span><span class="tag">Migrations</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M12 20v-7M6 20v-4M18 20V8M3 4h18"/></svg></span><h3>Internal Tools &amp; Automation</h3><p>Custom tools and integrations that remove manual ops.</p><div class="chips" style="margin-top:14px"><span class="tag">Custom APIs</span><span class="tag">Evolution API / WAHA</span><span class="tag">n8n</span><span class="tag">Zapier</span><span class="tag">Python scraping</span><span class="tag">Data pipelines</span><span class="tag">Dashboards</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span><h3>Development &amp; Platforms</h3><p>Full-stack builds, from CRM to multi-tenant SaaS.</p><div class="chips" style="margin-top:14px"><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">SQLite</span><span class="tag">Multi-tenant SaaS</span><span class="tag">PWA</span></div></div>
+    <div class="card fcard reveal"><span class="tile"><svg viewBox="0 0 24 24"><path d="M3 10h18M3 6h18v12H3zM7 15h2"/></svg></span><h3>AI &amp; Fintech</h3><p>Practical AI automation and payments integration.</p><div class="chips" style="margin-top:14px"><span class="tag">Claude API</span><span class="tag">AI automation</span><span class="tag">Prompt engineering</span><span class="tag">Ollama · local LLM</span><span class="tag">Moyasar</span><span class="tag">Payment gateways</span></div></div>
   </div>
 </section>
 
@@ -278,11 +283,12 @@ footer{border-top:1px solid var(--border);background:#fff;padding:44px 0}
       <div class="co">Code7 Information Technology</div><div class="loc">Jeddah, Saudi Arabia · Full-time</div>
       <ul>
         <li><b>Lead the IT &amp; DevOps function</b> — own the infrastructure, security and technical roadmap for the company and its products across three countries.</li>
-        <li>Architected and operate cloud + on-prem systems: <b>self-hosted GitLab &amp; CI/CD</b>, servers, CDN, backups and disaster recovery.</li>
-        <li>Migrated the organisation to <b>Microsoft 365 (80+ users)</b> and consolidated fragmented infrastructure into a single, governed setup.</li>
-        <li>Built internal platforms — an <b>asset/CRM hub, custom ERP and a multi-tenant SaaS</b> — and automated operations with n8n &amp; custom APIs.</li>
-        <li>Led <b>security &amp; reliability</b>: incident response, malware recovery, hardening, RBAC and DNS/email security; integrated payment gateways &amp; ZATCA e-invoicing.</li>
-        <li>Drive <b>hiring, onboarding and mentoring</b> — screened 250+ CVs, ran technical interviews, and lead a growing engineering team.</li>
+        <li>Architected and operate <b>cloud + on-prem infrastructure</b>: self-hosted GitLab &amp; CI/CD, server provisioning &amp; upgrades, CDN, a secure <b>multi-site VPN</b>, backups and disaster recovery.</li>
+        <li>Migrated the organisation to <b>Microsoft 365 (80+ users)</b> and consolidated fragmented systems into one centrally-governed, monitored setup.</li>
+        <li>Drove <b>cloud &amp; SaaS costs down</b> through deep audits, right-sizing and license cleanup — with no loss of uptime.</li>
+        <li>Designed &amp; built <b>internal tools and platforms</b> — an asset/CRM hub, a custom ERP, a multi-tenant SaaS and a data-processing lab — and automated operations with n8n &amp; custom APIs.</li>
+        <li>Led <b>security &amp; reliability</b>: incident response, malware recovery, hardening, RBAC, DNS/email security and monitoring; integrated payment gateways &amp; <b>ZATCA e-invoicing</b>.</li>
+        <li>Lead <b>hiring, onboarding and mentoring</b> of a growing engineering team.</li>
       </ul>
     </div>
     <div class="card role reveal">
@@ -393,6 +399,21 @@ burger.addEventListener('click', () => mobile.classList.toggle('open'));
 mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobile.classList.remove('open')));
 const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 4 * 60) + 'ms'; io.observe(el); });
+// active nav indicator — scroll-based so the last/short section (Contact) still highlights at page bottom
+const navlinks = [...document.querySelectorAll('.nav-links a')];
+const secIds = ['about','skills','experience','work','contact'];
+function setActive(id){ navlinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id)); }
+function syncActive(){
+  const line = scrollY + innerHeight * 0.34;            // detection line ~1/3 down the viewport
+  // bottom-of-page guard: if we've reached the end, force the last section active
+  if (innerHeight + scrollY >= document.body.scrollHeight - 4){ setActive(secIds[secIds.length-1]); return; }
+  let current = secIds[0];
+  for (const id of secIds){ const el = document.getElementById(id); if (el && el.offsetTop <= line) current = id; }
+  setActive(current);
+}
+addEventListener('scroll', syncActive, { passive: true });
+addEventListener('resize', syncActive, { passive: true });
+syncActive();
 </script>
 </body>
 </html>
