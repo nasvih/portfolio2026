@@ -13,10 +13,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --bg:#f4f7fa; --surface:#ffffff; --surface-2:#f8fbfc;
-  --ink:#0a1424; --ink-soft:#4a586b; --ink-faint:#8593a6;
-  --accent:#0ea5b9; --accent-deep:#0b7c8c; --accent-2:#16c5a8; --accent-soft:#e4f7f9;
-  --line:#e6edf3; --line-soft:#eef3f8;
+  --bg:#eef2f8; --surface:#ffffff; --surface-2:#f6f9fc;
+  --ink:#0a1530; --ink-soft:#46546e; --ink-faint:#8492ab;
+  --accent:#10b981; --accent-deep:#059669; --accent-2:#34d399; --accent-soft:#e7f8f0;
+  --line:#e4eaf2; --line-soft:#eef2f8;
   --ok:#12a150; --warn:#e08a16;
   --shadow:0 1px 2px rgba(10,20,36,.04), 0 6px 18px rgba(16,44,58,.05);
   --shadow-md:0 2px 6px rgba(10,20,36,.05), 0 14px 34px rgba(16,44,58,.09);
@@ -37,8 +37,8 @@ h2.title{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.03em;ma
 .lead{color:var(--ink-soft);font-size:16.5px;max-width:660px}
 .btn{display:inline-flex;align-items:center;gap:9px;height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;transition:.22s cubic-bezier(.22,1,.36,1);border:1px solid transparent;cursor:pointer}
 .btn svg{width:17px;height:17px}
-.btn-primary{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 22px rgba(14,165,185,.34)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(14,165,185,.44)}
+.btn-primary{background:linear-gradient(120deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 8px 22px rgba(16,185,129,.34)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(16,185,129,.44)}
 .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.24)}
 .btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
 .card{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--r);box-shadow:var(--shadow)}
@@ -48,7 +48,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-l
 .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(170%) blur(16px);background:rgba(244,247,250,.8);border-bottom:1px solid var(--line-soft)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
 .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.02em;font-size:17px}
-.brand .dot{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:16px;box-shadow:0 5px 14px rgba(14,165,185,.4)}
+.brand .dot{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:16px;box-shadow:0 5px 14px rgba(16,185,129,.4)}
 .nav-links{display:flex;gap:4px;align-items:center}
 .nav-links a{padding:8px 14px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink-soft);transition:.18s}
 .nav-links a:hover{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
@@ -56,22 +56,22 @@ svg{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-l
 @media(max-width:780px){.nav-links a:not(.btn){display:none}}
 
 /* HERO */
-.hero{background:radial-gradient(1100px 560px at 82% -8%,rgba(22,197,168,.2),transparent 56%),linear-gradient(158deg,#091020 0%,#0c2730 56%,#093840 100%);color:#fff;padding:80px 0 96px;position:relative;overflow:hidden}
+.hero{background:radial-gradient(1100px 560px at 82% -8%,rgba(16,185,129,.2),transparent 56%),linear-gradient(158deg,#0a1633 0%,#0d2150 55%,#0a1838 100%);color:#fff;padding:80px 0 96px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.032) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.032) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(740px 420px at 76% 18%,#000,transparent 76%);pointer-events:none}
 .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr .85fr;gap:50px;align-items:center}
-.term{display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:#a7f3e4;background:rgba(22,197,168,.1);border:1px solid rgba(22,197,168,.28);padding:7px 14px;border-radius:999px}
+.term{display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:600;color:#a7f3e4;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.28);padding:7px 14px;border-radius:999px}
 .term .pulse{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.7);animation:pulse 2.2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.55)}70%{box-shadow:0 0 0 10px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
 .hero h1{font-size:clamp(36px,5.6vw,58px);font-weight:800;letter-spacing:-.035em;line-height:1.02;margin:20px 0 8px}
-.hero h1 .grad{background:linear-gradient(110deg,#22d3ee,#2dd4bf 60%,#5eead4);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .role{font-family:'JetBrains Mono',monospace;font-size:14.5px;color:#7dd3e8;letter-spacing:.01em}
+.hero h1 .grad{background:linear-gradient(110deg,#34d399,#6ee7b7 60%,#a7f3d0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .role{font-family:'JetBrains Mono',monospace;font-size:14.5px;color:#6ee7b7;letter-spacing:.01em}
 .hero p.sub{color:#c2d2e2;font-size:17.5px;max-width:540px;margin:20px 0 28px;line-height:1.6}
 .hero .cta{display:flex;gap:13px;flex-wrap:wrap}
 .hero .meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:#8ea1b6;font-size:13.5px}
 .hero .meta span{display:inline-flex;align-items:center;gap:8px}.hero .meta b{color:#dbe6f1;font-weight:600}.hero .meta svg{width:15px;height:15px;color:var(--accent-2)}
 .portrait{position:relative;justify-self:center}
-.portrait .glow{position:absolute;inset:-12%;background:radial-gradient(circle at 50% 40%,rgba(22,197,168,.45),transparent 62%);filter:blur(14px)}
-.portrait .frame{position:relative;width:308px;height:340px;border-radius:24px;overflow:hidden;border:1px solid rgba(45,212,191,.42);box-shadow:0 30px 70px rgba(0,0,0,.5);background:linear-gradient(135deg,#0e7490,#0f766e)}
+.portrait .glow{position:absolute;inset:-12%;background:radial-gradient(circle at 50% 40%,rgba(16,185,129,.45),transparent 62%);filter:blur(14px)}
+.portrait .frame{position:relative;width:308px;height:340px;border-radius:24px;overflow:hidden;border:1px solid rgba(45,212,191,.42);box-shadow:0 30px 70px rgba(0,0,0,.5);background:linear-gradient(135deg,#16345f,#0f766e)}
 .portrait .frame img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .portrait .badge{position:absolute;background:rgba(9,16,32,.78);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:11px 14px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-lg)}
 .portrait .badge .ic{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}.portrait .badge .ic svg{width:17px;height:17px}
@@ -129,7 +129,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-l
 .proj{padding:24px;transition:.22s cubic-bezier(.22,1,.36,1);position:relative}
 .proj:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:#bfe9ee}
 .proj .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.proj .ic{width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#0c7c8c,#0f766e);color:#fff;display:grid;place-items:center}.proj .ic svg{width:21px;height:21px}
+.proj .ic{width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,#16345f,#0f766e);color:#fff;display:grid;place-items:center}.proj .ic svg{width:21px;height:21px}
 .proj .tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;color:var(--accent-deep);background:var(--accent-soft);padding:5px 10px;border-radius:999px;letter-spacing:.05em}
 .proj h3{font-size:17.5px;font-weight:700;margin-bottom:7px;letter-spacing:-.01em}
 .proj p{font-size:14px;color:var(--ink-soft);margin-bottom:14px;line-height:1.58}
@@ -149,7 +149,7 @@ svg{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-l
 @media(max-width:680px){.two{grid-template-columns:1fr}}
 
 /* CONTACT */
-.contact{background:radial-gradient(800px 400px at 50% -20%,rgba(22,197,168,.22),transparent 60%),linear-gradient(158deg,#091020,#0c2730 60%,#093840);color:#fff;border-radius:30px;padding:60px 40px;text-align:center;position:relative;overflow:hidden}
+.contact{background:radial-gradient(800px 400px at 50% -20%,rgba(16,185,129,.22),transparent 60%),linear-gradient(158deg,#0a1633,#0d2150 60%,#0a1838);color:#fff;border-radius:30px;padding:60px 40px;text-align:center;position:relative;overflow:hidden}
 .contact::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(520px 320px at 50% 0%,#000,transparent 76%)}
 .contact > *{position:relative;z-index:2}
 .contact h2{font-size:clamp(28px,4vw,38px);font-weight:800;letter-spacing:-.025em}
@@ -208,12 +208,12 @@ footer{text-align:center;padding:36px 0;color:var(--ink-faint);font-size:13px}
 <!-- STATS -->
 <div class="stats wrap">
   <div class="grid">
-    <div class="stat reveal"><div class="n">2+</div><div class="l">Years leading DevOps &amp; Cloud</div></div>
-    <div class="stat reveal"><div class="n">3</div><div class="l">Countries of live infrastructure</div></div>
-    <div class="stat reveal"><div class="n">80+</div><div class="l">Users on a unified cloud platform</div></div>
+    <div class="stat reveal"><div class="n">2+</div><div class="l">Years in DevOps &amp; Cloud</div></div>
+    <div class="stat reveal"><div class="n">60%</div><div class="l">Faster deployments via CI/CD</div></div>
+    <div class="stat reveal"><div class="n">80+</div><div class="l">Users migrated to the cloud</div></div>
     <div class="stat reveal"><div class="n">12+</div><div class="l">Zero-downtime migrations</div></div>
-    <div class="stat reveal"><div class="n">99.9%</div><div class="l">Service availability upheld</div></div>
-    <div class="stat reveal"><div class="n">40%</div><div class="l">Cloud spend engineered out</div></div>
+    <div class="stat reveal"><div class="n">15+</div><div class="l">Projects delivered end-to-end</div></div>
+    <div class="stat reveal"><div class="n">100%</div><div class="l">Client satisfaction</div></div>
   </div>
 </div>
 
@@ -223,7 +223,7 @@ footer{text-align:center;padding:36px 0;color:var(--ink-faint);font-size:13px}
     <div class="reveal">
       <span class="eyebrow">about</span>
       <h2 class="title">Infrastructure that ships fast<br>and stays up</h2>
-      <p>I'm a <strong>Lead DevOps Engineer</strong> who owns the platform end-to-end — architecting cloud and on-prem systems, building CI/CD pipelines, hardening security, and automating the work that slows teams down. I do it for a fast-moving, multi-brand technology group operating across <strong>Saudi Arabia, the UAE and India</strong>.</p>
+      <p>I'm the <strong>Lead DevOps Engineer at Code7 Information Technology</strong>, where I own the platform end-to-end — architecting cloud and on-prem systems, building CI/CD pipelines, hardening security, and automating the work that slows teams down. I deliver this for Code7's own products and for its <strong>client companies (kept confidential)</strong> across <strong>Saudi Arabia, the UAE and India</strong>.</p>
       <p>My focus is the three things that decide whether software survives production: <strong>reliability, security and cost</strong>. I've moved entire organisations to the cloud with zero downtime, recovered systems from live attacks, stood up self-hosted CI/CD, and shipped the internal platforms teams depend on daily.</p>
       <p>I think in pipelines, automation and clean documentation — and I lift the engineers around me as I go.</p>
     </div>
@@ -259,35 +259,43 @@ footer{text-align:center;padding:36px 0;color:var(--ink-faint);font-size:13px}
   <div class="reveal"><span class="eyebrow">experience</span><h2 class="title">Where I've made impact</h2></div>
   <div class="timeline">
     <div class="tl reveal">
-      <div class="when">2025 — Present</div>
+      <div class="when">Sep 2025 — Present</div>
       <h3>Lead DevOps Engineer</h3>
-      <div class="org">Multi-brand technology group · Saudi Arabia &nbsp;(CTO-level technical scope)</div>
+      <div class="org">Code7 Information Technology · Saudi Arabia</div>
       <ul>
-        <li>Architect and operate the full <b>cloud + on-prem stack</b> across three countries — compute, networking, storage, identity, backups and DR.</li>
+        <li>Lead the cloud &amp; DevOps function — architect and operate the infrastructure behind Code7's products and its <b>client companies (under confidentiality)</b> across three countries.</li>
         <li>Stood up <b>self-hosted GitLab with CI/CD runners</b> and standardised containerised deployments, giving a distributed team one repeatable release pipeline.</li>
-        <li>Own <b>security &amp; reliability</b>: incident response, malware eradication, hardening, RBAC and DNS/email security — aligned to PDPL / NCA.</li>
-        <li>Engineered <b>cloud &amp; SaaS spend down ~40%</b> through audits, right-sizing and a cost-efficient multi-site VPN — with no loss of availability.</li>
-        <li>Designed and shipped internal platforms — a <b>multi-tenant SaaS</b>, ERP/CRM and ops dashboards — and mentor a growing engineering team.</li>
+        <li>Own <b>security &amp; reliability</b>: incident response, malware eradication, hardening, RBAC, disaster recovery and monitoring (Prometheus + Grafana) — aligned to PDPL / NCA.</li>
+        <li>Design and ship internal platforms — a <b>multi-tenant SaaS</b>, ERP/CRM and ops dashboards — and mentor junior engineers.</li>
       </ul>
     </div>
     <div class="tl reveal">
-      <div class="when">2024 — 2025</div>
-      <h3>DevOps &amp; Cloud Engineer</h3>
-      <div class="org">Multi-brand technology group · Saudi Arabia</div>
+      <div class="when">Jul 2024 — Jul 2025</div>
+      <h3>DevOps Engineer</h3>
+      <div class="org">Code7 Information Technology · Saudi Arabia</div>
       <ul>
-        <li>Architected a <b>unified cloud identity &amp; collaboration platform</b> (Microsoft 365) for 80+ users across three countries, with automated backups and a DR plan.</li>
-        <li>Migrated <b>12+ production sites and mail systems with zero downtime</b>; replaced fragmented tooling with centrally-governed infrastructure.</li>
-        <li>Deployed monitoring, secure VPN access and DNS hardening; ran an <b>AWS audit</b> that recovered significant recurring cloud cost.</li>
+        <li>Managed <b>AWS infrastructure (EC2, S3, Route 53)</b>, ensuring high uptime and cost-efficiency.</li>
+        <li>Optimised CI/CD pipelines with GitHub Actions, <b>reducing deployment time by 60%</b>.</li>
+        <li>Containerised and orchestrated deployments with <b>Docker &amp; Kubernetes</b>; added performance monitoring via Prometheus + Grafana.</li>
+        <li>Delivered a <b>Microsoft 365 migration for 80+ users</b> across three countries, plus secure VPN access and DNS hardening — for Code7 and its clients.</li>
       </ul>
     </div>
     <div class="tl reveal">
-      <div class="when">2022 — 2024</div>
-      <h3>Web Developer &amp; Project Coordinator</h3>
-      <div class="org">Freelance &amp; university initiatives</div>
+      <div class="when">2022 — Present</div>
+      <h3>Freelance Web Developer</h3>
+      <div class="org">Self-employed · Remote</div>
       <ul>
-        <li>Delivered <b>15+ production websites</b> with SEO, hosting and deployment workflows — maintaining 100% client satisfaction.</li>
-        <li>Built event platforms with ticketing, scheduling and live updates; coordinated operations for <b>1000+ attendees</b>.</li>
-        <li>Founded a campus <b>financial-literacy initiative</b>, engaging 200+ students from concept to launch.</li>
+        <li>Delivered <b>15+ web projects</b> with integrated SEO, hosting and deployment workflows — maintaining <b>100% client satisfaction</b>.</li>
+        <li>Clients across healthcare, e-commerce and international business; full lifecycle from concept to deployment.</li>
+      </ul>
+    </div>
+    <div class="tl reveal">
+      <div class="when">2020 — 2024</div>
+      <h3>Website Head &amp; Program Coordinator</h3>
+      <div class="org">College of Engineering Thalassery · Kerala, India</div>
+      <ul>
+        <li>Built dynamic <b>event &amp; fest portals</b> with ticketing, scheduling and live results; coordinated operations for <b>1000+ attendees</b>.</li>
+        <li>Founded a campus <b>financial-literacy initiative</b> (200+ students) and mentored junior developers.</li>
       </ul>
     </div>
   </div>
@@ -296,7 +304,7 @@ footer{text-align:center;padding:36px 0;color:var(--ink-faint);font-size:13px}
 <!-- PROJECTS -->
 <section id="projects" style="background:var(--surface-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
   <div class="wrap">
-    <div class="reveal"><span class="eyebrow">selected work</span><h2 class="title">Featured engineering</h2><p class="lead">Infrastructure, reliability, security and platform work. Employer and client names are kept confidential.</p></div>
+    <div class="reveal"><span class="eyebrow">selected work</span><h2 class="title">Featured engineering</h2><p class="lead">Infrastructure, reliability, security and platform work — delivered at Code7 for its products and client companies. Client names are kept confidential.</p></div>
     <div class="proj-grid">
       <div class="proj card reveal"><div class="top"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></span><span class="tag">CLOUD · IDENTITY</span></div><h3>Multi-region cloud identity platform</h3><p>Architected a unified identity &amp; collaboration platform for 80+ users across three countries — single sign-on, role-based access, automated device backups and a tested disaster-recovery plan.</p><div class="stack"><span>Microsoft 365</span><span>IAM</span><span>OneDrive</span><span>DR / Backups</span></div></div>
       <div class="proj card reveal"><div class="top"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 13l3 3 4-5 4 4"/></svg></span><span class="tag">FINOPS · RELIABILITY</span></div><h3>Cloud cost &amp; reliability engineering</h3><p>Audited and re-architected AWS (EC2, RDS, S3, Cloudflare), right-sized workloads, and replaced costly access with an efficient multi-site VPN — cutting cloud spend ~40% while improving availability.</p><div class="stack"><span>AWS</span><span>OpenVPN</span><span>Cloudflare</span><span>Monitoring</span></div></div>
@@ -320,7 +328,7 @@ footer{text-align:center;padding:36px 0;color:var(--ink-faint);font-size:13px}
 <!-- CONTACT -->
 <section id="contact" class="wrap">
   <div class="contact reveal">
-    <span class="eyebrow" style="color:#7dd3e8;justify-content:center">let's talk</span>
+    <span class="eyebrow" style="color:#6ee7b7;justify-content:center">let's talk</span>
     <h2>Let's build something reliable</h2>
     <p>Open to Lead DevOps, SRE and Cloud Engineering roles, and selective consulting. If you need infrastructure that's fast, secure and cost-efficient — let's connect.</p>
     <div class="links">
